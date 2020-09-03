@@ -115,8 +115,8 @@ function initialLabels() {
           try {
             console.log(last);
             var last_div = $("span[data-end='" + last + "']");
-            last = parseInt(last_div[0].id);
-            console.log(last);
+            // last = parseInt(last_div[0].id);
+            // console.log(last);
           } catch (e) {
             console.log("last_div failed 133")
           }
@@ -136,8 +136,8 @@ function initialLabels() {
           console.log(last);
           var last_div = $("span[data-end='" + last + "']");
           console.log(last_div);
-          last = parseInt(last_div[0].id);
-          console.log(last);
+          // last = parseInt(last_div[0].id);
+          // console.log(last);
         } catch (e) {
           console.log(e);
           console.log("last_div failed 133")

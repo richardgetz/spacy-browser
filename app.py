@@ -19,7 +19,7 @@ DATASET_LOADED = False
 ACTIVE_LEARNING_MODEL = None
 # TODO: add as default config instead and make editable in the frontend
 LABELS = ["PERSON", "LOC", "ORG", "GPE", "NORP",
-          "PHONE", "EMAIL", "PRODUCT", "CARDINAL", "DATE"]
+          "PHONE", "EMAIL", "PRODUCT", "CARDINAL", "DATE", "IPV4", "IPV6", "URL", "USERNAME"]
 domain = "http://127.0.0.1"
 CERT_LOCATION = "adhoc"
 port = 5000
@@ -118,7 +118,7 @@ def index():
         #         flash("Someone is still training on your current dataset. Highly recommend waiting until they are finished. If you go to the homepage you will forceably take their training task.")
         #         return redirect(url_for('load_data'))
         # else:
-            # ACTIVE.append(DATASET[0])
+        # ACTIVE.append(DATASET[0])
         send = DATASET
         # DATASET.remove(DATASET[0])
         return render_template('index.html', labels=LABELS, tokens=send["text"], spans=send["spans"], deps=send["deps"])
